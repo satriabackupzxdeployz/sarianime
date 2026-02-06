@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    { "source": "/api/home", "destination": "/api/home.js" },
+    { "source": "/api/search", "destination": "/api/search.js" },
+    { "source": "/api/detail", "destination": "/api/detail.js" },
+    { "source": "/api/episode", "destination": "/api/episode.js" },
+    { "source": "/api/schedule", "destination": "/api/schedule.js" },
+    { "source": "/api/movie", "destination": "/api/movie.js" },
+    { "source": "/api/ongoing", "destination": "/api/ongoing.js" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
