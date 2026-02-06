@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SatriaNime</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="home-view">
+        <div class="container">
+            <div class="header">
+                <h1>SATRIA<span style="color:var(--accent)">NIME</span></h1>
+                <p>Watch your favorite anime online</p>
+                
+                <div class="main-nav">
+                    <button id="nav-home" class="nav-btn active" onclick="window.location.href='/'">
+                        <i class="fas fa-home"></i> Home
+                    </button>
+                    <button id="nav-ongoing" class="nav-btn">
+                        <i class="fas fa-play-circle"></i> Ongoing
+                    </button>
+                    <button id="nav-movie" class="nav-btn">
+                        <i class="fas fa-film"></i> Movies
+                    </button>
+                    <button id="nav-schedule" class="nav-btn">
+                        <i class="fas fa-calendar-alt"></i> Schedule
+                    </button>
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Search anime...">
+                        <button id="search-btn" class="nav-btn">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="loading" class="loader"></div>
+            
+            <h3 id="page-title" class="section-title">Latest Anime</h3>
+            
+            <div id="anime-list" class="grid-container"></div>
+
+            <footer class="footer">
+                <span style="color: var(--accent); font-weight: bold; text-shadow: 0 0 5px var(--accent);">SatriaNime</span>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Support</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div id="player-view">
+        <div class="player-header">
+            <button class="back-btn" onclick="closeAnimeDetail()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+        </div>
+        
+        <div class="content-container">
+            <div id="main-content"></div>
+        </div>
+
+        <div class="episode-bar" onclick="toggleDrawer()">
+            <div class="episode-bar-content">
+                <span id="current-title">Loading...</span>
+                <span class="episodes-toggle">Episodes <i class="fas fa-chevron-up"></i></span>
+            </div>
+        </div>
+
+        <div class="episode-drawer" id="episode-drawer">
+            <div class="drawer-header">
+                <span><i class="fas fa-list"></i> Episodes List</span>
+                <span onclick="toggleDrawer()"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="episode-grid" id="episode-list"></div>
+            <div class="drawer-footer">
+                <i class="fas fa-gamepad"></i> SATRIANIME
+            </div>
+        </div>
+    </div>
+
+    <div id="alert" class="alert"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
